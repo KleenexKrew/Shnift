@@ -1,36 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyMovement : MonoBehaviour
+public class SurgeonEnemyMovement : MonoBehaviour
 {
     public GameObject Player;
     public int EnemySpeed;
     public int xMoveDirection;
     private bool facingRight = true;
-    private bool canMove;
 
     // Use this for initialization
     void Start()
     {
-        canMove = true;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canMove == true)
-        {
-            
-            EnemyMove();
-        }
+        EnemyMove();
     }
 
     private void EnemyMove()
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(xMoveDirection, 0) * EnemySpeed;
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,24 +32,24 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.tag == "WallForEnemy")
         {
             FlipEnemy();
-        } else if (collision.gameObject.tag == "Player")
+        }
+        else if (collision.gameObject.tag == "Player")
         {
+           
             if (Player.gameObject.GetComponent<PlayerMovement>().isFurBall == false)
             {
-                canMove = false;
-                StartCoroutine("HugCat");
-            } else
+                StartCoroutine("Die");
+            }
+            else
             {
                 FlipEnemy();
             }
-            
         }
-        
-
     }
 
     void FlipEnemy()
     {
+        
         if (xMoveDirection > 0)
         {
             xMoveDirection = -1;
@@ -70,16 +64,9 @@ public class EnemyMovement : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    IEnumerator HugCat()
+    IEnumerator Die()
     {
-        
-        canMove = false;
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        //Player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        yield return new WaitForSeconds(5);
-        
-        FlipEnemy();
-        canMove = true;
-        
+        SceneManager.LoadScene("Main");
+        yield return null;
     }
 }

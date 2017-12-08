@@ -9,6 +9,7 @@ TagManager:
   - FatFood
   - WallForEnemy
   - CatLoverEnemy
+  - SurgeonEnemy
   layers:
   - Default
   - TransparentFX

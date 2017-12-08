@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public AnimatorOverrideController FatCatAnimator; // Set this in the Inspector
-    public int playerSpeed = 10;
+    public int playerSpeed;
     public bool isSkinnyCat = true;
+    public bool isFurBall = false;
     private bool canMove;
     private bool facingRight = false;
     private float moveX;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         canMove = true;
+        playerSpeed = 10;
     }
 
 
@@ -34,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
         //CONTROLS
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
+        if (Input.GetKey("left shift") && !isSkinnyCat) {
+            isFurBall = true;
+        } else
+        {
+            isFurBall = false;
+        }
+    
         
         //ANIM
         //PLAYER DIRECTION
@@ -98,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= 2;
             localScale.y *= 2;
             transform.localScale = localScale;
+            playerSpeed = 7;
 
             isSkinnyCat = false;
         }
@@ -117,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
             localScale.x /= 2;
             localScale.y /= 2;
             transform.localScale = localScale;
+            playerSpeed = 10;
 
             isSkinnyCat = true;
         }
