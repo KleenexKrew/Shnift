@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = false;
     private float moveX;
     private float moveY;
+    
 
     // Use this for initialization
     void Start()
