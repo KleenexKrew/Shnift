@@ -10,6 +10,7 @@ TagManager:
   - WallForEnemy
   - CatLoverEnemy
   - SurgeonEnemy
+  - BreakableWall
   layers:
   - Default
   - TransparentFX

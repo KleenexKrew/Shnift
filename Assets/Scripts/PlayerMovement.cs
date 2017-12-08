@@ -85,7 +85,13 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("CAT LOVERRRRRRRRRR");
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             canMove = false;
-        } 
+        } else if (collision.gameObject.tag == "BreakableWall")
+        {
+            if (isSkinnyCat == false)
+            {
+                Destroy(collision.gameObject);
+            }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

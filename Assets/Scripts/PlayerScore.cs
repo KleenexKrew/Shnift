@@ -2,44 +2,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
 
-    public bool hasDied;
-    public int health;
+    private float timeLeft = 120;
+    public int playerScore = 0;
+    public GameObject timeLeftUI;
+    public GameObject playerScoreUI;
 
     // Use this for initialization
     void Start()
     {
-        hasDied = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.y < -8)
+        timeLeft -= Time.deltaTime;
+        timeLeftUI.gameObject.GetComponent<Text>().text = ("Time left: " + (int)timeLeft);
+        playerScoreUI.gameObject.GetComponent<Text>().text = ("Score: " + playerScore);
+        if (timeLeft < 0.1f)
         {
-            hasDied = true;
-        }
-
-        if (hasDied == true)
-        {
-            //player dies
-            StartCoroutine("Die");
+            SceneManager.LoadScene("Main");
         }
     }
 
-
-
-    // lke method or function but can pause for a few seconds
-    IEnumerator Die()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene("Prototype1");
-        yield return null;
+        // end level -- change scene to the next level??
+        if (collision.gameObject.tag == "EndLevel")
+        {
+            Debug.Log("touched end of level");
+            CountScore();
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        //if (collision.gameObject.tag == "Coin")
+        //{
+        //    playerScore += 10;
+        //    Destroy(collision.gameObject);
+        //}
+    }
 
-        //Debug.Log("Player has fallen");
-        //yield return new WaitForSeconds(2);
-        //Debug.Log("Player has died");
+    void CountScore()
+    {
+        playerScore = playerScore + (int)(timeLeft * 10);
+
     }
 }

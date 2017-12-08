@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     private bool canMove;
     private int numRightPressed;
     private int numLeftPressed;
+    //private float lastCollisionTime;
     private Vector2 huggingCatLocalScale;
 
     // Use this for initialization
@@ -20,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
         canMove = true;
         numLeftPressed = 0;
         numRightPressed = 0;
+        
 
         HuggingCat.gameObject.SetActive(false);
 
@@ -33,20 +35,20 @@ public class EnemyMovement : MonoBehaviour
             EnemyMove();
         } else
         {
-            if (Input.GetKeyDown("left"))
+            if (Input.GetKeyDown("left") || Input.GetKeyDown("a"))
             {
                 numLeftPressed += 1;
                 HuggingCat.gameObject.GetComponent<Rigidbody2D>().MoveRotation(10);
                 Debug.Log("left pressed");
             }
-            if (Input.GetKeyDown("right"))
+            if (Input.GetKeyDown("right") || Input.GetKeyDown("d"))
             {
                 HuggingCat.gameObject.GetComponent<Rigidbody2D>().MoveRotation(-10);
                 numRightPressed += 1;
                 Debug.Log("right pressed");
             }
 
-            if (numLeftPressed > 20 && numRightPressed > 20)
+            if (numLeftPressed > 2 && numRightPressed > 2)
             {
                 numRightPressed = 0;
                 numLeftPressed = 0;
@@ -73,6 +75,8 @@ public class EnemyMovement : MonoBehaviour
             FlipEnemy();
         } else if (collision.gameObject.tag == "Player")
         {
+            float timeNow = Time.realtimeSinceStartup;
+            Debug.Log(timeNow);
             if (Player.gameObject.GetComponent<PlayerMovement>().isFurBall == false)
             {
                 canMove = false;
@@ -88,11 +92,14 @@ public class EnemyMovement : MonoBehaviour
             } else
             {
                 FlipEnemy();
-            }
-            
-        }
-        
+            }  
+        } 
+    }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //lastCollisionTime = Time.realtimeSinceStartup;
+        //Debug.Log(lastCollisionTime);
     }
 
     void FlipEnemy()
