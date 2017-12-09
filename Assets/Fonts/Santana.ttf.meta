@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4dcff65f59b8a8248ab7d2bb6ed3c4eb
+timeCreated: 1512717310
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Santana
+  fontNames:
+  - Santana
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0a0ed44ac432ac4408d45927e8c7a743, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

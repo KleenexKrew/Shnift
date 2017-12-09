@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c98155ee93534114693f03315d96bad5
+timeCreated: 1512718233
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: jabjai
+  fontNames:
+  - jabjai
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 253d043db90998f46989485705167e62, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
