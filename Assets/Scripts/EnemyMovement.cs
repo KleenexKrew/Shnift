@@ -48,7 +48,7 @@ public class EnemyMovement : MonoBehaviour
                 Debug.Log("right pressed");
             }
 
-            if (numLeftPressed > 2 && numRightPressed > 2)
+            if (numLeftPressed > 10 && numRightPressed > 10)
             {
                 numRightPressed = 0;
                 numLeftPressed = 0;
@@ -91,7 +91,7 @@ public class EnemyMovement : MonoBehaviour
                 //StartCoroutine("HugCat");
             } else
             {
-                FlipEnemy();
+                Physics2D.IgnoreCollision(collision.gameObject.GetComponent<BoxCollider2D>(), gameObject.GetComponent<BoxCollider2D>(), true);
             }  
         } 
     }

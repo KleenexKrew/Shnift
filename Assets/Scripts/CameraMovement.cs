@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraMovement : MonoBehaviour
+public class CameraMovement: MonoBehaviour
 {
     GameObject player;
 
@@ -25,4 +25,3 @@ public class CameraMovement : MonoBehaviour
         }
     }
 }
-

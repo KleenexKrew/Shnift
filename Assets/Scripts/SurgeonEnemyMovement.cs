@@ -8,7 +8,7 @@ public class SurgeonEnemyMovement : MonoBehaviour
     public GameObject Player;
     public int EnemySpeed;
     public int xMoveDirection;
-    private bool facingRight = true;
+    private bool facingRight = false;
 
     // Use this for initialization
     void Start()
@@ -42,9 +42,9 @@ public class SurgeonEnemyMovement : MonoBehaviour
             }
             else
             {
-                FlipEnemy();
+                Physics2D.IgnoreCollision(collision.gameObject.GetComponent<BoxCollider2D>(), gameObject.GetComponent<BoxCollider2D>(), true);
             }
-        }
+        } 
     }
 
     void FlipEnemy()
