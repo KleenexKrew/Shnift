@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isFurBall = false;
         }
+        Debug.Log(isFurBall);
     
         
         //ANIM

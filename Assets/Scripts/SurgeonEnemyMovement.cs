@@ -66,7 +66,7 @@ public class SurgeonEnemyMovement : MonoBehaviour
 
     IEnumerator Die()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         yield return null;
     }
 }
