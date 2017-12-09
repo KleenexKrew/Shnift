@@ -50,7 +50,7 @@ public class PlayerScore : MonoBehaviour
 
     void CountScore()
     {
-        playerScore = playerScore + (int)(timeLeft * 10);
+        playerScore = playerScore + (int)(timeLeft);
 
     }
 }
