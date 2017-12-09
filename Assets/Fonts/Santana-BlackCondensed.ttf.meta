@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 025417ee32205954780cf12c3ac88b8c
+timeCreated: 1512717310
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Santana-BlackCondensed
+  fontNames:
+  - Santana-BlackCondensed
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

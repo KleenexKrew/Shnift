@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 16e96828a1ed6a446bf7d26dc2e165d8
+timeCreated: 1512715787
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 'AlphaFridgeMagnets '
+  fontNames:
+  - 'AlphaFridgeMagnets '
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

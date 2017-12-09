@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 6d80ebc18b357eb49b5981bd39b89e06
+timeCreated: 1512718233
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Siple
+  fontNames:
+  - Siple
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 13391142784119840ad4370fb8d0187d, type: 3}
+  - {fileID: 12800000, guid: 6321c2c9d5f70ec458e04f52a45f2e38, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

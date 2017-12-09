@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3fe3c6abb18033146aebf4383719da4e
+timeCreated: 1512717310
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Santana-RegularCondensed
+  fontNames:
+  - Santana-RegularCondensed
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
