@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4096189018624876}
   - component: {fileID: 212569098823542510}
-  - component: {fileID: 61030226537174772}
   - component: {fileID: 50260350488830340}
+  - component: {fileID: 61736372030083118}
   m_Layer: 0
   m_Name: Ground - top corner left
   m_TagString: Ground
@@ -36,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1586446795653324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.89, y: 2.68, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 1.3460879, y: 1.1415454, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61030226537174772
+--- !u!61 &61736372030083118
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,7 +85,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.52}
+  m_Size: {x: 3.84, y: 3.84}
   m_EdgeRadius: 0
 --- !u!212 &212569098823542510
 SpriteRenderer:

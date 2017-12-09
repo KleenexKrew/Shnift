@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4941707536289292}
   - component: {fileID: 212469013517499140}
-  - component: {fileID: 61784123211050780}
+  - component: {fileID: 61539970565033374}
   m_Layer: 0
   m_Name: Breakable Wall - side middle
   m_TagString: BreakableWall
@@ -35,13 +35,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1271177587653334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.93, y: 2.59, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -9.982364, y: -0.9073419, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61784123211050780
+--- !u!61 &61539970565033374
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -64,7 +64,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.52}
+  m_Size: {x: 3.84, y: 3.84}
   m_EdgeRadius: 0
 --- !u!212 &212469013517499140
 SpriteRenderer:

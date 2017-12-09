@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4319788530871526}
   - component: {fileID: 212050435285037704}
-  - component: {fileID: 61819772683833694}
-  - component: {fileID: 50764458290685740}
+  - component: {fileID: 45872143148028630}
+  - component: {fileID: 61315656623228468}
   m_Layer: 0
   m_Name: Ground - vertical
   m_TagString: Ground
@@ -36,33 +36,21 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261556268592064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.08, y: 0.83, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 3.73, y: 1.27, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50764458290685740
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!45 &45872143148028630
+Skybox:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261556268592064}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61819772683833694
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
+--- !u!61 &61315656623228468
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,7 +73,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.52}
+  m_Size: {x: 3.84, y: 3.84}
   m_EdgeRadius: 0
 --- !u!212 &212050435285037704
 SpriteRenderer:

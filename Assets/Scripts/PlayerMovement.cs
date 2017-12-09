@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isSkinnyCat = true;
     public bool isFurBall = false;
     private bool canMove;
-    private bool facingRight = false;
+    private bool facingRight = true;
     private float moveX;
     private float moveY;
     
@@ -91,6 +92,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
+        } else if (collision.gameObject.tag == "EndLevel")
+        {
+            Destroy(collision.gameObject);
+            StartCoroutine("FinishLevel");
         }
     }
 
@@ -138,6 +143,12 @@ public class PlayerMovement : MonoBehaviour
 
             isSkinnyCat = true;
         }
+    }
+
+    IEnumerator FinishLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return null;
     }
 }
 

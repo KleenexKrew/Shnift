@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4649673208164064}
   - component: {fileID: 212627966457081902}
-  - component: {fileID: 61119795074042786}
+  - component: {fileID: 61127928398301884}
   m_Layer: 0
   m_Name: Breakable Wall - crate medium
   m_TagString: BreakableWall
@@ -35,13 +35,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1590046468798956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.99, y: 3.5, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -4.4484186, y: -0.8626459, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61119795074042786
+--- !u!61 &61127928398301884
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -64,7 +64,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.52}
+  m_Size: {x: 3.83, y: 3.83}
   m_EdgeRadius: 0
 --- !u!212 &212627966457081902
 SpriteRenderer:

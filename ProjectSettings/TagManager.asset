@@ -11,6 +11,7 @@ TagManager:
   - CatLoverEnemy
   - SurgeonEnemy
   - BreakableWall
+  - EndLevel
   layers:
   - Default
   - TransparentFX
