@@ -96,6 +96,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(collision.gameObject);
             StartCoroutine("FinishLevel");
+        } else if (collision.gameObject.tag == "WallForEnemy")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<BoxCollider2D>(), gameObject.GetComponent<BoxCollider2D>(), true);
         }
     }
 
